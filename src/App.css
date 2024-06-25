@@ -3,7 +3,11 @@ body {
   margin: 0;
   padding: 0;
   background-color: #fff;
+<<<<<<< HEAD
   background-image: url("C:\\Users\\Devyanshi Gupta\\Downloads\\New folder\\Projects\\E-comm\\ecommerce-bookstore\\src\\assets\\bg2.jpg");
+=======
+  background-image: url("assets/bg2.jpg");
+>>>>>>> 9851b6dd15f3230fed9c1d337bfc7959902b23a3
 }
 
 h1 {
