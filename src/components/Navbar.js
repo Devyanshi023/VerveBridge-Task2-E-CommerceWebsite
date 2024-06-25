@@ -1,19 +1,22 @@
 // src/components/Navbar.js
+
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import "./Navbar.css";
-import logo from "../assets/logo.jpg";
+import "./Navbar.css"; // Import the CSS file for styling
+import logo from "../assets/logo.jpg"; // Import the logo image
 
 const Navbar = () => {
-  const [searchQuery, setSearchQuery] = useState("");
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const navigate = useNavigate();
+  const [searchQuery, setSearchQuery] = useState(""); // State for managing the search query
+  const [isMenuOpen, setIsMenuOpen] = useState(false); // State for managing the menu toggle
+  const navigate = useNavigate(); // Hook for navigation
 
+  // Handle search form submission
   const handleSearch = (e) => {
     e.preventDefault();
-    navigate(`/search?q=${searchQuery}`);
+    navigate(`/search?q=${searchQuery}`); // Navigate to the search results page with the query
   };
 
+  // Toggle the menu open/close state
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
