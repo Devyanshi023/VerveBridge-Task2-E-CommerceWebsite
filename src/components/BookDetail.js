@@ -1,26 +1,29 @@
 // src/components/BookDetail.js
+
 import React, { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import axios from "axios";
 import "./BookDetail.css"; // Import the CSS file for styling
 
 const BookDetail = ({ addToCart }) => {
-  const { id } = useParams();
-  const [book, setBook] = useState(null);
+  const { id } = useParams(); // Get the book ID from the URL parameters
+  const [book, setBook] = useState(null); // Initialize book state to null
 
+  // Fetch book details from the OpenLibrary API
   useEffect(() => {
     const fetchBookDetails = async () => {
       try {
         const response = await axios.get(`https://openlibrary.org${id}.json`);
-        setBook(response.data);
+        setBook(response.data); // Set the book state with the fetched data
       } catch (error) {
-        console.error("Error fetching book details:", error);
+        console.error("Error fetching book details:", error); // Log any errors
       }
     };
 
-    fetchBookDetails();
-  }, [id]);
+    fetchBookDetails(); // Call the fetch function
+  }, [id]); // Re-run the effect if the book ID changes
 
+  // Show a loading message while the book data is being fetched
   if (!book) {
     return <div>Loading...</div>;
   }
