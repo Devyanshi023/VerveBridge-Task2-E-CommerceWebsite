@@ -1,0 +1,47 @@
+/* src/components/BookList.css */
+h3 {
+  width: 100%;
+}
+.book-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+.book-item {
+  border: 1px solid rgb(173, 219, 245);
+  padding: 10px;
+  border-radius: 4px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(107, 167, 251, 0.923);
+  transition: transform 0.2s;
+  background-color: rgb(173, 219, 245);
+}
+
+.book-item img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+  height: 80px;
+  width: 75px;
+}
+
+.book-item h2 {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.book-item p {
+  color: #021530 !important;
+  margin: 0;
+}
+
+.book-item:hover {
+  transform: scale(1.05);
+}
+
+.book-item button {
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
