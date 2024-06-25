@@ -39,3 +39,16 @@
   font-weight: 300;
   border-radius: 5px;
 }
+
+/* Responsive Styles */
+@media (max-width: 575.98px) {
+  .cart-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .check {
+    width: auto;
+    font-size: 12px;
+  }
+}

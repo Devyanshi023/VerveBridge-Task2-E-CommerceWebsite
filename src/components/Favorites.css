@@ -19,7 +19,21 @@ p {
   flex-direction: row;
   justify-content: space-evenly;
 }
+
 .favorites-list img {
   width: 80px;
   height: 100px;
+}
+
+/* Responsive Styles */
+@media (max-width: 575.98px) {
+  .favorites-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .favorites-list img {
+    width: 60px;
+    height: 80px;
+  }
 }

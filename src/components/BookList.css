@@ -1,7 +1,7 @@
-/* src/components/BookList.css */
 h3 {
   width: 100%;
 }
+
 .book-list {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -44,4 +44,19 @@ h3 {
 .book-item button {
   margin-bottom: 5px;
   margin-top: 5px;
+}
+
+/* Responsive Styles */
+@media (max-width: 767.98px) {
+  .book-list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .book-list {
+    grid-template-columns: 1fr;
+  }
 }

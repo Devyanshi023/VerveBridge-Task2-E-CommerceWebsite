@@ -1,5 +1,3 @@
-/* src/components/BookDetail.css */
-
 .book-detail {
   padding: 20px;
   max-width: 600px;
@@ -35,4 +33,19 @@
 
 .book-detail button:hover {
   background-color: #005bb5;
+}
+
+/* Responsive Styles */
+@media (max-width: 575.98px) {
+  .book-detail {
+    padding: 10px;
+  }
+
+  .book-detail h1 {
+    font-size: 20px;
+  }
+
+  .book-detail button {
+    padding: 8px 16px;
+  }
 }
