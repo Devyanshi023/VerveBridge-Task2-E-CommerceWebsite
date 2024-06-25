@@ -1,19 +1,21 @@
+
 import React, { useState } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar";
-import Home from "./components/Booklist";
+import Home from "./components/BookList";
 import BookDetail from "./components/BookDetail";
 import Cart from "./components/Cart";
 import Checkout from "./components/Checkout";
 import Favorites from "./components/Favorites";
 import SearchResults from "./components/Search";
 import Categories from "./components/Categories";
-import "./App.css";
+import "./App.css"; // Import the CSS file for styling
 
 const App = () => {
-  const [cartItems, setCartItems] = useState([]);
-  const [favoriteItems, setFavoriteItems] = useState([]);
+  const [cartItems, setCartItems] = useState([]); // State to manage cart items
+  const [favoriteItems, setFavoriteItems] = useState([]); // State to manage favorite items
 
+  // Function to add a book to the cart
   const addToCart = (book) => {
     const existingBook = cartItems.find((item) => item.key === book.key);
     if (existingBook) {
@@ -29,10 +31,12 @@ const App = () => {
     }
   };
 
+  // Function to remove a book from the cart
   const removeFromCart = (book) => {
     setCartItems(cartItems.filter((item) => item.key !== book.key));
   };
 
+  // Function to update the quantity of a book in the cart
   const updateQuantity = (book, quantity) => {
     setCartItems(
       cartItems.map((item) =>
@@ -41,6 +45,7 @@ const App = () => {
     );
   };
 
+  // Function to add a book to the favorites
   const addToFavorites = (book) => {
     setFavoriteItems((prevFavorites) => {
       if (prevFavorites.some((item) => item.key === book.key)) {
@@ -53,7 +58,7 @@ const App = () => {
   return (
     <Router>
       <div className="App">
-        <Navbar />
+        <Navbar /> {/* Navbar component for navigation */}
         <Routes>
           <Route
             path="/"
